@@ -13,5 +13,8 @@
   "bugs": {
     "url": "https://github.com/tpluscode/github-copier-template/issues"
   },
-  "homepage": "https://github.com/tpluscode/github-copier-template#readme"
+  "homepage": "https://github.com/tpluscode/github-copier-template#readme",
+  "devDependencies": {
+    "@changesets/cli": "^2.21.0"
+  }
 }
