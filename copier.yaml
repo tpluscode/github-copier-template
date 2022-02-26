@@ -1,0 +1,25 @@
+_subdirectory: src
+_templates_suffix: .jinja
+
+_envops:
+  block_end_string: "%}"
+  block_start_string: "{%"
+  comment_end_string: "#}"
+  comment_start_string: "{#"
+  keep_trailing_newline: true
+  variable_end_string: "}}"
+  variable_start_string: "{{"
+
+changesets:
+  type: bool
+  default: true
+
+main_branch:
+  type: str
+  when: "{{changesets}}"
+  default: main
+
+install_command:
+  type: str
+  when: "{{changesets}}"
+  default: yarn

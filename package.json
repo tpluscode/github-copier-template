@@ -1,0 +1,17 @@
+{
+  "name": "@tpluscode/github-copier-template",
+  "version": "0.0.0",
+  "scripts": {
+    "release": "changeset publish"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpluscode/github-copier-template.git"
+  },
+  "author": "tplscode <npm@t-code.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tpluscode/github-copier-template/issues"
+  },
+  "homepage": "https://github.com/tpluscode/github-copier-template#readme"
+}
