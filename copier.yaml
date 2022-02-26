@@ -11,8 +11,9 @@ _envops:
   variable_start_string: "{{"
 
 _tasks:
-  - "{% if changesets %}npx {% if node_version > 14 %}-y{% endif %} add-dependencies --dev changesets{% endif %}"
-  - '{% if changesets %}npx {% if node_version > 14 %}-y{% endif %} npm-add-script -k release -v "changeset publish" -f{% endif %}'
+  - "{% if changesets %}npx add-dependencies --dev changesets{% endif %}"
+  - '{% if changesets %}npx npm-add-script -k release -v "changeset publish" -f{% endif %}'
+  - "{% if package_manager == 'yarn' %}yarn{% else %}npm install{% endif %}"
 
 node_version:
   type: int
