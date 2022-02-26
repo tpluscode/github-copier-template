@@ -22,7 +22,7 @@ jobs:
           node-version: {{node_version}}
 
       - name: Install Dependencies
-        run: {% if package_manager === 'yarn' %}yarn install --immutable{% else %}npm install --ci{% endif %}
+        run: {% if package_manager == 'yarn' %}yarn install --immutable{% else %}npm install --ci{% endif %}
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
