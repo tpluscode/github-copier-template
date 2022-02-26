@@ -7,7 +7,7 @@
 Use the `copy` command to add to an existing repo
 
 ```
-copier -a .copier-github.yaml copy https://github.com/tpluscode/github-copier-template .
+copier -a .copier-github.yaml copy https://github.com/tpluscode/github-copier-template.git .
 ```
 
 ### Updating
