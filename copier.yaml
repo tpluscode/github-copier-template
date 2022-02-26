@@ -10,7 +10,7 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
-tasks:
+_tasks:
   - "{% if changesets %}npx {% if node_version > 14 %}-y{% endif %} add-dependencies --dev changesets{% endif %}"
   - '{% if changesets %}npx {% if node_version > 14 %}-y{% endif %} npm-add-script -k release -v "changeset publish" -f{% endif %}'
 
