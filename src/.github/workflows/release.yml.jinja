@@ -19,10 +19,10 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@master
         with:
-          node-version: 16
+          node-version: {{node_version}}
 
       - name: Install Dependencies
-        run: {{install_command}}
+        run: {% if package_manager === 'yarn' %}yarn install --immutable{% else %}npm install --ci{% endif %}
 
       - name: Create Release Pull Request
         uses: changesets/action@v1
