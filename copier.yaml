@@ -33,5 +33,5 @@ package_manager:
   type: str
   when: "{{changesets}}"
   choices:
-    npm: "NPM"
-    yarn: "Yarn"
+    NPM: npm
+    Yarn: yarn
