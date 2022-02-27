@@ -31,7 +31,7 @@ release_with_changesets:
 
 auto_tag:
   type: bool
-  when: {{not release_with_changesets}}
+  when: "{{not release_with_changesets}}"
   default: false
 
 main_branch:
