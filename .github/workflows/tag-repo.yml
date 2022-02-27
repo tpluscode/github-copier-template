@@ -2,8 +2,8 @@ name: GitHub Releases
 
 on:
   push:
-    tags:
-      - "*"
+    branches:
+      - master
 
 jobs:
   tag:

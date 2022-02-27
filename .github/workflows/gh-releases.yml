@@ -2,8 +2,8 @@ name: Tag repository
 
 on:
   push:
-    branches:
-      - master
+    tags:
+      - "*"
 
 jobs:
   tag:
