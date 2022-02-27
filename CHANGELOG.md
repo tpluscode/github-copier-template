@@ -1,5 +1,14 @@
 # @tpluscode/github-copier-template
 
+## 1.1.1
+
+### Patch Changes
+
+- adc75e3: Do not fail when `package.json` does not exist
+- a547c7b: Unhashable key
+- 9c5fc5c: Rename changesets workflow
+- dbcecab: Bring back the tasks
+
 ## 1.1.0
 
 ### Minor Changes
