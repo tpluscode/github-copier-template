@@ -28,3 +28,4 @@ jobs:
         uses: changesets/action@v1
         env:
           GITHUB_TOKEN: {{ '${{ secrets.GITHUB_TOKEN }}' }}
+          {% if release_with_changesets %}{{ 'NPM_TOKEN: ${{ secrets.NPM_TOKEN }}' }}{% endif %}

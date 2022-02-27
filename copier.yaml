@@ -12,7 +12,7 @@ _envops:
 
 _tasks:
   - "{% if changesets %}npx add-dependencies --dev @changesets/cli{% endif %}"
-  - '{% if changesets %}npx npm-add-script -k release -v "changeset publish" -f{% endif %}'
+  - '{% if release_with_changesets %}npx npm-add-script -k release -v "changeset publish" -f{% endif %}'
   - "{% if package_manager == 'yarn' %}yarn{% else %}npm install{% endif %}"
 
 node_version:
@@ -28,6 +28,11 @@ main_branch:
   type: str
   when: "{{changesets}}"
   default: main
+
+release_with_changesets:
+  type: bool
+  when: "{{changesets}}"
+  default: false
 
 package_manager:
   type: str
