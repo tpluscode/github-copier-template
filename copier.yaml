@@ -24,15 +24,20 @@ changesets:
   type: bool
   default: true
 
-main_branch:
-  type: str
-  when: "{{changesets}}"
-  default: main
-
 release_with_changesets:
   type: bool
   when: "{{changesets}}"
   default: false
+
+auto_tag:
+  type: bool
+  when: {{not release_with_changesets}}
+  default: false
+
+main_branch:
+  type: str
+  when: "{{changesets or auto_tag}}"
+  default: main
 
 package_manager:
   type: str
