@@ -1,4 +1,4 @@
-name: Tag repository
+name: GitHub Releases
 
 on:
   push:
