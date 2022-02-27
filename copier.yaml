@@ -10,11 +10,6 @@ _envops:
   variable_end_string: "}}"
   variable_start_string: "{{"
 
-_tasks:
-  - "{% if changesets %}npx add-dependencies --dev @changesets/cli{% endif %}"
-  - '{% if release_with_changesets %}npx npm-add-script -k release -v "changeset publish" -f{% endif %}'
-  - "{% if package_manager == 'yarn' %}yarn{% else %}npm install{% endif %}"
-
 node_version:
   type: int
   help: Major node version
