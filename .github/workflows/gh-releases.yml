@@ -1,0 +1,19 @@
+name: Tag repository
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  tag:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - name: Parse Changelog
+        id: changelog
+        uses: ocavue/changelog-parser-action@v1
+      - uses: ncipollo/release-action@v1
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          body: ${{ steps.changelog.outputs.latestBody }}
