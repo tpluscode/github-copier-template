@@ -1,5 +1,12 @@
 # @tpluscode/github-copier-template
 
+## 1.1.2
+
+### Patch Changes
+
+- e4bfcba: Template failed to update on tasks where there was `[ -f package.json ]` condition
+- e4bfcba: missing changeset release command
+
 ## 1.1.1
 
 ### Patch Changes
