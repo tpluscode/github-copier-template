@@ -11,8 +11,8 @@ _envops:
   variable_start_string: "{{"
 
 _tasks:
-  - "{% if changesets %}[ -f package.json ] && npx add-dependencies --dev @changesets/cli{% endif %}"
-  - '{% if release_with_changesets %}[ -f package.json ] && npx npm-add-script -k release -v "changeset publish" -f{% endif %}'
+  - "{% if changesets %}[ -f package.json ] && npx add-dependencies --dev @changesets/cli || echo ''{% endif %}"
+  - '{% if release_with_changesets %}[ -f package.json ] && npx npm-add-script -k release -v "changeset publish" -f || echo ""{% endif %}'
   - "{% if package_manager == 'yarn' %}[ -f package.json ] && yarn{% else %}npm install{% endif %}"
 
 node_version:
